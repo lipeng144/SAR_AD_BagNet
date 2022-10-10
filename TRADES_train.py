@@ -86,7 +86,6 @@ if __name__ == '__main__':
     test_dir = '.../val'
     train_batch_size = args.batch_size
     test_batch_size = args.test_batch_size
-    # initialize the VGG model for RGB images with 3 channels
     normalize = transforms.Normalize(mean=mean,
                                      std=std)
     train_dataset = datasets.ImageFolder(
@@ -119,4 +118,4 @@ if __name__ == '__main__':
     net = SAR_BagNet.SAR_BagNet(pretrained=False)
     optimizer = torch.optim.Adam(net.parameters(), lr=lr)
     train(train_loader,test_loader,net,optimizer,device,num_epochs)
-    torch.save(obj=net, f=os.path.join(mode_dir, 'Bagnet_trades ' + '.pth'))
+    torch.save(obj=net, f=os.path.join(mode_dir, 'SAR_BagNet_trades ' + '.pth'))
