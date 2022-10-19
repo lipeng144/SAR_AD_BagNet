@@ -14,7 +14,7 @@ from torchvision import models
 import numpy as np
 model_urls = {
             'SAR_BagNet': '.../BagNet.pth',
-            'Bagnet18_attack': '.../Bagnet_attack.pth'
+            'SAR_Bagnet_attack': '.../Bagnet_attack.pth'
                             }
 model_dir='.../saved_model'
 class BasicBlock(nn.Module):
