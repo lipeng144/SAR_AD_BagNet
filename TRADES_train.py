@@ -23,7 +23,6 @@ parser.add_argument('--beta', default=6.0,
                     help='regularization, i.e., 1/lambda in TRADES')
 parser.add_argument('--mean',type=float,default=0.184,help='mean of dataset')
 parser.add_argument('--std',type=float,default=0.119,help='standard  of dataset')
-parser.add_argument('--distance',type=float,default=0.119,help='standard  of dataset')
 global args
 args = parser.parse_args()
 def train(train_iter, test_iter, net, optimizer, device, num_epochs):
